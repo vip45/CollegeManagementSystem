@@ -1,0 +1,185 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(var(--angle), var(--dark2) 40%, var(--light1) 100%);
+  background: linear-gradient(45deg, var(--dark2) 40%, var(--light1) 100%);
+   /* animation: rotateGradient 20s linear infinite; */
+   padding: 0 16px;
+}
+@keyframes rotateGradient {
+  0%    { --angle: 0deg; }
+  1.38% { --angle: 5deg; }
+  2.77% { --angle: 10deg; }
+  4.16% { --angle: 15deg; }
+  5.55% { --angle: 20deg; }
+  6.94% { --angle: 25deg; }
+  8.33% { --angle: 30deg; }
+  9.72% { --angle: 35deg; }
+  11.11% { --angle: 40deg; }
+  12.5%  { --angle: 45deg; }
+  13.88% { --angle: 50deg; }
+  15.27% { --angle: 55deg; }
+  16.66% { --angle: 60deg; }
+  18.05% { --angle: 65deg; }
+  19.44% { --angle: 70deg; }
+  20.83% { --angle: 75deg; }
+  22.22% { --angle: 80deg; }
+  23.61% { --angle: 85deg; }
+  25%    { --angle: 90deg; }
+
+  30.55% { --angle: 110deg; }
+  36.11% { --angle: 130deg; }
+  41.66% { --angle: 150deg; }
+  47.22% { --angle: 170deg; }
+  50%    { --angle: 180deg; }
+
+  55.55% { --angle: 200deg; }
+  61.11% { --angle: 220deg; }
+  66.66% { --angle: 240deg; }
+  72.22% { --angle: 260deg; }
+  77.77% { --angle: 280deg; }
+  83.33% { --angle: 300deg; }
+  88.88% { --angle: 320deg; }
+  94.44% { --angle: 340deg; }
+  100%   { --angle: 360deg; }
+}
+
+
+.loginMain {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--light2);
+}
+.left {
+  max-width: 50%;
+  overflow: hidden;
+  max-height: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.left img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(50%);
+  animation: imageBreath 6s ease-in-out infinite;
+}
+.loginForm {
+  width: 100%;
+}
+@keyframes imageBreath {
+
+  0% {
+    transform: scale(1);
+    filter: grayscale(50%);
+  }
+
+  20% {
+    transform: scale(1.02) ;
+    filter: grayscale(40%);
+  }
+
+  40% {
+    transform: scale(1.04) ;
+    filter: grayscale(20%);
+  }
+
+  50% {
+    transform: scale(1.05) ;
+    filter: grayscale(0%);
+  }
+
+  60% {
+    transform: scale(1.04) ;
+    filter: grayscale(20%);
+  }
+
+  80% {
+    transform: scale(1.02) ;
+    filter: grayscale(40%);
+  }
+
+  100% {
+    transform: scale(1) ;
+    filter: grayscale(50%);
+  }
+}
+
+.heading{
+    color: var(--dark1);
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+}
+
+.loginForm{
+    height: 100%;
+    padding: 16px;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 16px;
+}
+.btns button{
+    background: none;
+    border: none;
+    flex: 1;
+    background: linear-gradient(12deg,var(--dark1),var(--dark3)) ;
+    color: var(--light2);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 16px;
+}
+.loginForm > div{
+    width: 100%;
+    position: relative;
+    margin-bottom: 16px;
+}
+.loginForm > div input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--dark1);
+  background: transparent;
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.loginForm > div input:focus,
+.loginForm > div input:focus-visible {
+  border-bottom-color: var(--dark2);
+}
+.loginButton button{
+    background: linear-gradient(12deg, var(--dark1), var(--dark3));
+    color: var(--light2);
+    border: none;
+    border-radius: 16px;
+    flex: 1;
+    padding: 8px 32px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width:992px) {
+    .left{
+        display: none;
+    }
+    .loginMain{max-width: 500px;}
+    .heading{
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
